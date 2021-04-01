@@ -1,0 +1,777 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #d0c3da;
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+hr {
+  width: 25%;
+}
+
+.header {
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+#logo {
+  width: 200px;
+  transition: 250ms;
+}
+
+#logo:hover {
+  transform: scale(1.2);
+}
+
+#logo-i-social {
+  display: flex;
+}
+
+#logo-holder {
+  flex-grow: 1;
+  text-align: left;
+  margin: 20px;
+  /* border: 1px solid black; */
+}
+
+#social-holder {
+  flex-grow: 1;
+  text-align: right;
+  margin: 20px;
+  /* border: 1px solid black; */
+}
+
+#social-holder img {
+  width: 25px;
+  height: 25px;
+  margin: 15px 15px;
+  transition: 300ms;
+}
+
+#social-holder img:hover {
+  transform: scale(1.5);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  border-top: 1px solid black;
+  animation: fadeIn 3.5s 1;
+  transition: 300ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 0%;
+  }
+
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar ul {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  /* border: 1px solid grey; */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 2px;
+  transition: 300ms;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+  padding: 0.5rem;
+  display: block;
+  transition: 300ms;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  background-color: rgb(43, 43, 43);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.navbar li a:hover {
+  transform: scale(1.4);
+}
+
+/* .toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  color: rgb(43, 43, 43);
+  border-radius: 10px;
+} */
+
+.container {
+  margin: 20px;
+  /* border: 1px solid black; */
+  height: auto;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #38383875;
+  background-color: #f5f5f5;
+}
+
+.container h1 {
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.container p {
+  text-align: center;
+  /* border: 1px solid black; */
+  padding: 20px;
+}
+
+#container-o-nama {
+  height: auto;
+}
+
+#o-nama-opis {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.auto-grid {
+  --auto-grid-min-size: 16rem;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 1rem;
+}
+
+.grid {
+  --auto-grid-min-size: 16rem;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 1rem;
+  width: 50%;
+}
+
+.grid-item {
+  margin: 19px;
+  padding: 0px;
+  text-align: center;
+  transition: 250ms;
+  border-radius: 12px;
+}
+.grid-item a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.grid-item:hover p #IDEJA {
+  color: rgb(255, 231, 125);
+}
+.grid-item:hover h3 #BIO {
+  color: rgb(95, 173, 58);
+}
+
+.grid-item:hover {
+  background-color: #d0c3da;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#image-holder h3,
+#image-holder p {
+  text-align: center;
+}
+
+#image-holder img {
+  border: 2px solid black;
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  display: inline-block;
+}
+
+#container-jumbo {
+  border-top: 1px solid black;
+  background: url("/images/polje-edit.png");
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+  border-bottom: 1px solid #2b2b2b;
+}
+#naslov {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 6vw; /* ne povećavaj */
+  padding-top: 60px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  opacity: 0.2;
+  transition: 500ms;
+  animation: text 3s 1;
+}
+
+/* PODNASLOV */
+#podnaslov a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+#container-jumbo h3 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 2vw; /* ne povećavaj */
+  padding-top: 0px;
+  margin-top: 0;
+  opacity: 0.2;
+  animation: reveal 4.3s 1;
+  transition: 500ms;
+}
+
+#početna-holder .grid-item:focus-visible {
+  animation: text 1s 1;
+}
+
+/* ANIMACIJE 
+++++
++++
+++
++
+*/
+
+@keyframes text {
+  0% {
+    color: #2b2b2b;
+    opacity: 0.3;
+    transform: skewX(0deg) translateX(-500px);
+  }
+  30% {
+    letter-spacing: 12px;
+    opacity: 0.6;
+  }
+  75% {
+    letter-spacing: 5px;
+    opacity: 1;
+    transform: skew(0deg);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: skewX(10deg) translateX(-500px);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 0%;
+  }
+
+  75% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+#naslov:hover {
+  text-align: center;
+  font-size: 6.3vw;
+  opacity: 1;
+}
+
+#podnaslov:hover {
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.15vw;
+  opacity: 1;
+}
+
+#naslov-a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+#container-početna {
+  margin-top: 0px;
+  background: url("/images/pattern1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 100%;
+}
+
+#container-početna .grid-item {
+  background-color: #f5f5f5;
+  color: #2b2b2b;
+  cursor: auto;
+}
+#container-početna .grid-item:focus {
+  animation: slide-left 1s 1;
+}
+
+#container-početna .grid-item:hover {
+  transform: scale(1.05);
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  cursor: auto;
+}
+
+#container-početna #ideja-paragraf {
+  padding-bottom: 0;
+}
+
+#elementi-početna-desni .icon {
+  width: 48px;
+  height: auto;
+  padding-bottom: 10px;
+}
+#elementi-početna-desni:hover .icon {
+  cursor: pointer;
+  filter: invert(100%) sepia(1%) saturate(102%) hue-rotate(188deg)
+    brightness(116%) contrast(92%);
+}
+
+#lavanda-logo {
+  width: 26px;
+  height: 26px;
+  margin-top: 0px;
+  margin-bottom: -50px;
+  margin-left: 20px; /*kao i padding na <p> */
+}
+
+#container-proizvodi {
+  height: auto;
+  margin: 0;
+  width: 100%;
+}
+#container-proizvodi h1 {
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  width: min-content;
+  border-radius: 12px;
+}
+#container-proizvodi h1:hover a {
+  color: #f5f5f5;
+  transition: 250ms;
+}
+#container-proizvodi h1:hover {
+  background-color: #2b2b2b;
+  transition: 250ms;
+}
+
+#container-proizvodi p {
+  text-align: left;
+  margin-top: 0;
+  width: auto;
+  background-color: #f5f5f5;
+  color: #2b2b2b;
+  border-radius: 12px;
+}
+#container-proizvodi .grid-item:hover {
+  transform: scale(1);
+  background-color: #f5f5f5;
+  color: #2b2b2b;
+  cursor: auto;
+}
+#container-proizvodi {
+  background-image: url("/images/macbook-lavanda.jpg");
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position-x: 50vw;
+  background-position-y: -400px;
+}
+
+#proizvodi-a-href {
+  text-align: left;
+  background-color: #f5f5f5;
+  padding: 12px;
+  padding-top: 0;
+}
+
+#proizvodi-a-href a {
+  transition: 250ms;
+}
+
+#proizvodi-a-href h3:hover a {
+  transform: scale(1.1);
+  color: #f5f5f5;
+}
+
+#proizvodi-a-href h2 a {
+  color: #f5f5f5;
+}
+
+.grid-item h2 {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  border-radius: 5px;
+}
+
+#proizvodi-a-href h3 {
+  width: auto;
+  padding: 5px;
+  transition: 250ms;
+  border-radius: 12px;
+}
+
+#proizvodi-a-href h3:hover {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+}
+
+#container-kontakt {
+  margin: auto;
+  width: 75%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#Kontakt h3 {
+  padding: 12px;
+}
+#Kontakt img {
+  padding: 12px;
+  opacity: 0.5;
+  width: 250px;
+  height: 250px;
+  transition: 250ms;
+}
+#Kontakt .grid-item:hover img {
+  opacity: 1;
+}
+
+/* FOOTER
+//
+//
+//
+ */
+#container-footer {
+  margin: 0;
+}
+
+#container-footer a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+#container-footer li {
+  transition: 250ms;
+}
+
+#container-footer li:hover {
+  font-weight: bolder;
+}
+
+#container-footer li,
+#container-footer .grid-item {
+  list-style: none;
+  text-align: left;
+  margin-top: 5px;
+}
+
+#footer-grid {
+  margin: 40px;
+  margin-bottom: 0;
+}
+
+#footer {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  transition: 250ms;
+}
+
+#footer:hover {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  transform: scale(1.1);
+}
+#footer:hover #moja-firma {
+  color: rgb(255, 231, 125);
+}
+
+/* MEDIA QUERY
++++++++
++++++
+++++
++++
+++
++ */
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  #Kontakt img {
+    padding: 12px;
+    opacity: 0.5;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #Kontakt img {
+    padding: 12px;
+    opacity: 0.5;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  #naslov {
+    padding-top: 18px;
+    font-size: 9vw;
+    opacity: 0.8;
+  }
+
+  #container-jumbo h3 {
+    font-size: 4vw;
+    opacity: 0.8;
+  }
+  @keyframes reveal {
+    0% {
+      opacity: 0%;
+    }
+
+    50% {
+      opacity: 0%;
+    }
+
+    75% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+  #container-jumbo {
+    height: 70vh;
+    margin-bottom: 19px;
+  }
+
+  #social-holder img {
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+  }
+
+  hr {
+    width: 50%;
+  }
+
+  #container-početna .grid {
+    --auto-grid-min-size: 16rem;
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--auto-grid-min-size), 1fr)
+    );
+    grid-gap: 1rem;
+    width: auto;
+    margin: 10px;
+  }
+
+  #početna-holder p,
+  #početna-holder .grid-item {
+    margin: 0px;
+    padding: 5px;
+  }
+
+  #image-holder {
+    margin-bottom: 19px;
+  }
+
+  #container-o-nama p,
+  #container-o-nama .grid-item {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+  #Kontakt .grid-item {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  #Kontakt img {
+    padding: 5px;
+    opacity: 0.5;
+    width: 150px;
+    height: 150px;
+  }
+
+  #container-footer .auto-grid {
+    margin-top: 0;
+  }
+
+  #footer p {
+    font-size: 0.7em;
+    width: 75%;
+    margin: auto;
+  }
+}
+
+@media all and (max-width: 480px) {
+  #naslov {
+    padding-top: 18px;
+    font-size: 9vw;
+    opacity: 0.8;
+  }
+
+  #logo-holder {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  #container-jumbo h3 {
+    font-size: 4vw;
+    opacity: 0.8;
+  }
+  @keyframes reveal {
+    0% {
+      opacity: 0%;
+    }
+
+    50% {
+      opacity: 0%;
+    }
+
+    75% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+
+  #container-jumbo {
+    height: 70vh;
+    margin-bottom: 19px;
+    background-position-x: -43vw;
+  }
+
+  #logo {
+    width: 85%;
+  }
+
+  #social-holder img {
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+  }
+
+  hr {
+    width: 50%;
+  }
+
+  #container-početna .grid {
+    --auto-grid-min-size: 16rem;
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--auto-grid-min-size), 1fr)
+    );
+    grid-gap: 1rem;
+    width: auto;
+    margin: 10px;
+  }
+
+  #početna-holder p,
+  #početna-holder .grid-item {
+    margin: 0px;
+    padding: 5px;
+  }
+
+  #image-holder {
+    margin-bottom: 19px;
+  }
+
+  #container-o-nama p,
+  #container-o-nama .grid-item {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #Kontakt .grid-item {
+    margin: 5px;
+  }
+
+  #Kontakt img {
+    padding: 12px;
+    opacity: 0.5;
+    width: 120px;
+    height: 120px;
+  }
+
+  #container-footer .auto-grid {
+    margin-top: 0;
+  }
+
+  #footer p {
+    font-size: 0.7em;
+    width: 75%;
+    margin: auto;
+  }
+}
